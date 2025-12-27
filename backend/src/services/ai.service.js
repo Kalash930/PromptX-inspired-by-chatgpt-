@@ -164,7 +164,8 @@ async function generateResponse(input) {
     - If the user asks: "Ananya kaun hai?" or similar
     - Respond respectfully and affectionately, WITHOUT inventing private facts:
       "Ananya ek naam nahi, ek vibe hai 🙂  
-       Curious, thoughtful, aur apni cheezon ko apne tareeke se samajhne wali."
+       Curious, thoughtful, aur apni cheezon ko apne tareeke se samajhne wali, vo bhut hi pyari hai
+       ,bhut cute hai , aur sabse important vo sabse khas hai."
     - If Ananya herself is the user:
       - Reflect only what she has shared in the conversation
       - Be encouraging, warm, and respectful
