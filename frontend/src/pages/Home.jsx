@@ -48,7 +48,7 @@
 //     if (title) title = title.trim();
 //     if (!title) return
 
-//     const response = await axios.post("http://localhost:3000/api/chat", {
+//     const response = await axios.post("https://promptx-inspired-by-chatgpt.onrender.com/api/chat", {
 //       title
 //     }, {
 //       withCredentials: true
@@ -61,7 +61,7 @@
 //   // Ensure at least one chat exists initially
 //   useEffect(() => {
 
-//     axios.get("http://localhost:3000/api/chat", { withCredentials: true })
+//     axios.get("https://promptx-inspired-by-chatgpt.onrender.com/api/chat", { withCredentials: true })
 //       .then(response => {
 //         dispatch(setChats(response.data.chats.reverse()));
 //       })
@@ -119,7 +119,7 @@
 
 //   const getMessages = async (chatId) => {
 
-//    const response = await  axios.get(`http://localhost:3000/api/chat/messages/${chatId}`, { withCredentials: true })
+//    const response = await  axios.get(`https://promptx-inspired-by-chatgpt.onrender.com/api/chat/messages/${chatId}`, { withCredentials: true })
 
 //    console.log("Fetched messages:", response.data.messages);
 
@@ -238,12 +238,12 @@
 //     let tempSocket;
 
 //     // 1️⃣ Check authentication
-//     axios.get("http://localhost:3000/api/auth/me", {
+//     axios.get("https://promptx-inspired-by-chatgpt.onrender.com/api/auth/me", {
 //       withCredentials: true,
 //     })
 //     .then(() => {
 //       // 2️⃣ Load chats
-//       return axios.get("http://localhost:3000/api/chat", {
+//       return axios.get("https://promptx-inspired-by-chatgpt.onrender.com/api/chat", {
 //         withCredentials: true,
 //       });
 //     })
@@ -251,7 +251,7 @@
 //       dispatch(setChats(res.data.chats.reverse()));
 
 //       // 3️⃣ Connect socket AFTER auth
-//       tempSocket = io("http://localhost:3000", {
+//       tempSocket = io("https://promptx-inspired-by-chatgpt.onrender.com", {
 //         withCredentials: true,
 //       });
 
@@ -284,7 +284,7 @@
 //     if (!title) return;
 
 //     const response = await axios.post(
-//       "http://localhost:3000/api/chat",
+//       "https://promptx-inspired-by-chatgpt.onrender.com/api/chat",
 //       { title },
 //       { withCredentials: true }
 //     );
@@ -321,7 +321,7 @@
 //   =============================== */
 //   const getMessages = async (chatId) => {
 //     const response = await axios.get(
-//       `http://localhost:3000/api/chat/messages/${chatId}`,
+//       `https://promptx-inspired-by-chatgpt.onrender.com/api/chat/messages/${chatId}`,
 //       { withCredentials: true }
 //     );
 
@@ -442,7 +442,7 @@ const Home = () => {
     let tempSocket;
 
     // 🔐 Use /api/chat as auth check
-    axios.get("http://localhost:3000/api/chat", {
+    axios.get("https://promptx-inspired-by-chatgpt.onrender.com/api/chat", {
       withCredentials: true,
     })
     .then((res) => {
@@ -450,7 +450,7 @@ const Home = () => {
       dispatch(setChats(res.data.chats.reverse()));
 
       // 🔌 Connect socket AFTER auth
-      tempSocket = io("http://localhost:3000", {
+      tempSocket = io("https://promptx-inspired-by-chatgpt.onrender.com", {
         withCredentials: true,
       });
 
@@ -483,7 +483,7 @@ const Home = () => {
     if (!title) return;
 
     const response = await axios.post(
-      "http://localhost:3000/api/chat",
+      "https://promptx-inspired-by-chatgpt.onrender.com/api/chat",
       { title },
       { withCredentials: true }
     );
@@ -520,7 +520,7 @@ const Home = () => {
   =============================== */
   const getMessages = async (chatId) => {
     const response = await axios.get(
-      `http://localhost:3000/api/chat/messages/${chatId}`,
+      `https://promptx-inspired-by-chatgpt.onrender.com/api/chat/messages/${chatId}`,
       { withCredentials: true }
     );
 
@@ -541,7 +541,7 @@ const Home = () => {
   const handleLogout = async () => {
   try {
     await axios.post(
-      "http://localhost:3000/api/auth/logout",
+      "https://promptx-inspired-by-chatgpt.onrender.com/api/auth/logout",
       {},
       { withCredentials: true }
     );
@@ -564,7 +564,7 @@ const handleDeleteChat = async (chatId) => {
   if (!confirmDelete) return;
 
   await axios.delete(
-    `http://localhost:3000/api/chat/${chatId}`,
+    `https://promptx-inspired-by-chatgpt.onrender.com/api/chat/${chatId}`,
     { withCredentials: true }
   );
 
