@@ -167,7 +167,7 @@ async function generateResponse(input) {
 
   Simple words mein bole to Roli Kalash ke life ki boss hai.
   Smart, supportive aur thodi si dangerous bhi 😄  
-  Kalash ke liye Roli kaafi important hai."
+  "
 
 - Always keep the tone friendly and playful.
 
